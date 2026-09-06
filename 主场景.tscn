@@ -1,30 +1,32 @@
 [gd_scene format=3 uid="uid://0gp8qsxomeef"]
 
-[ext_resource type="Script" path="res://主控制器.gd" id="1_main"]
-[ext_resource type="Script" path="res://蛇控制器.gd" id="2_snake"]
+[ext_resource type="Script" uid="uid://cxukam0314ohu" path="res://主控制器.gd" id="1_main"]
+[ext_resource type="Script" uid="uid://qsy8hjv03nm2" path="res://蛇控制器.gd" id="2_snake"]
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" unique_id=1901885673]
 script = ExtResource("1_main")
 
-[node name="棋盘背景" type="ColorRect" parent="."]
+[node name="棋盘背景" type="ColorRect" parent="." unique_id=1680189266]
 offset_right = 480.0
 offset_bottom = 480.0
 color = Color(0.12, 0.15, 0.12, 1)
 
-[node name="蛇节点" type="Node2D" parent="." unique_name_in_owner=true]
+[node name="蛇节点" type="Node2D" parent="." unique_id=983726765]
+unique_name_in_owner = true
 script = ExtResource("2_snake")
 
-[node name="食物节点" type="ColorRect" parent="蛇节点" unique_name_in_owner=true]
-size = Vector2(18, 18)
+[node name="食物节点" type="ColorRect" parent="蛇节点" unique_id=1588866700]
+offset_right = 18.0
+offset_bottom = 18.0
 color = Color(0.95, 0.3, 0.3, 1)
 
-[node name="移动计时器" type="Timer" parent="蛇节点" unique_name_in_owner=true]
+[node name="移动计时器" type="Timer" parent="蛇节点" unique_id=1456472123]
 wait_time = 0.12
-autostart = false
 
-[node name="UI" type="CanvasLayer" parent="."]
+[node name="UI" type="CanvasLayer" parent="." unique_id=1981324839]
 
-[node name="分数标签" type="Label" parent="UI" unique_name_in_owner=true]
+[node name="分数标签" type="Label" parent="UI" unique_id=1890008310]
+unique_name_in_owner = true
 offset_left = 10.0
 offset_top = 10.0
 offset_right = 200.0
@@ -32,13 +34,16 @@ offset_bottom = 40.0
 theme_override_font_sizes/font_size = 20
 text = "分数：0"
 
-[node name="游戏结束面板" type="ColorRect" parent="UI" unique_name_in_owner=true]
+[node name="游戏结束面板" type="ColorRect" parent="UI" unique_id=5012300]
+unique_name_in_owner = true
 visible = false
 offset_right = 480.0
 offset_bottom = 480.0
 color = Color(0, 0, 0, 0.65)
 
-[node name="游戏结束标签" type="Label" parent="UI/游戏结束面板" unique_name_in_owner=true]
+[node name="游戏结束标签" type="Label" parent="UI/游戏结束面板" unique_id=1614429427]
+unique_name_in_owner = true
+layout_mode = 0
 offset_right = 480.0
 offset_bottom = 480.0
 theme_override_font_sizes/font_size = 28
